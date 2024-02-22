@@ -4,7 +4,7 @@ import jakarta.persistence.Table;
 
 @Table(name = "ProdType")
 public enum ProdType {
-    STANDARD,
+    FOOD,
     ACCESSORY,
     CLEANING,
 }
