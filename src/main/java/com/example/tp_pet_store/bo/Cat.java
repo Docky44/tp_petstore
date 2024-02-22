@@ -6,10 +6,10 @@ import jakarta.persistence.*;
 @Table(name = "Cat")
 public class Cat {
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)// strategy = GenerationType.IDENTITY enléve les _seq
 
-    private Long id;
-
+    //création des colonnes
+    @Column(name = "chip_id")
     private FishLivEnv chipId;
 
     public Cat() {

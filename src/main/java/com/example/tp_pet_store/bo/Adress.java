@@ -6,8 +6,9 @@ import jakarta.persistence.*;
 @Table(name = "Adress")
 public class Adress {
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)// strategy = GenerationType.IDENTITY enléve les _seq
 
+    //création des colonnes
     @Column(name = "id")
     private Long id;
 
@@ -23,9 +24,11 @@ public class Adress {
     @Column(name = "city")
     private String city;
 
+    //création des relations
     @OneToOne(mappedBy = "address")
     private PetStore petStore;
 
+    //création des getters et setters
     public Long getId() {
         return id;
     }

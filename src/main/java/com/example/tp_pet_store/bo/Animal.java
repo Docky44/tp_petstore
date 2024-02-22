@@ -9,8 +9,9 @@ import java.util.List;
 @Table(name = "Animal")
 public class Animal {
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)// strategy = GenerationType.IDENTITY enléve les _seq
 
+    //création des colonnes
     @Column(name = "id")
     private Long id;
 
@@ -20,10 +21,12 @@ public class Animal {
     @Column(name = "color")
     private String color;
 
+    //création des relations
     @ManyToOne
     @JoinColumn(name = "id_pet_store", referencedColumnName = "id")
     private PetStore petStore;
 
+    //création des getters et setters
     public Long getId() {
         return id;
     }

@@ -8,8 +8,9 @@ import java.util.List;
 @Table(name = "PetStore")
 public class PetStore {
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)// strategy = GenerationType.IDENTITY enléve les _seq
 
+    //création des colonnes
     @Column(name = "id")
     private Long id;
 
@@ -18,6 +19,7 @@ public class PetStore {
     @Column(name = "manager_name")
     private String managerName;
 
+    //création des relations
     @ManyToMany
     @JoinTable(name = "pet_store_product",
             joinColumns = @JoinColumn(name = "id_pet_store", referencedColumnName = "id"),
@@ -32,6 +34,7 @@ public class PetStore {
     @OneToMany(cascade = CascadeType.ALL, mappedBy = "petStore")
     private List<Animal> animals;
 
+    //création des getters et setters
     public Long getId() {
         return id;
     }
