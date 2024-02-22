@@ -11,3 +11,7 @@
 <p>spring.datasource.password= mot de passe </p>
 
 <p>Lancer le projet à l'aide de la commande: mvn spring-boot:run</p>
+
+
+
+<h3>Simon PIERRE</h3>
